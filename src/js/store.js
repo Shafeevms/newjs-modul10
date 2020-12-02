@@ -1,4 +1,4 @@
-let students = [
+export let students = [
   {
     name: 'Гарри',
     middlename: 'Джеймсович',
@@ -30,5 +30,13 @@ let students = [
     faculty: 'Слизерин',
     dateBirth: '1960-11-03',
     startEdu: '1976-09-01',
+  },
+  {
+    name: 'Тестировщик',
+    middlename: 'Этого',
+    surname: 'Массива',
+    faculty: 'Разработка',
+    dateBirth: '1982-11-03',
+    startEdu: '2018-09-01',
   },
 ]

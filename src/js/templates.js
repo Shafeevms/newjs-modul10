@@ -19,7 +19,7 @@ const addForm = `<form class="form-inline mt-10">
                   </div>
                   <label for="inputDate">Faculty:</label>
                   <div class="input-group mb-2 mr-sm-2 ml-sm-2">
-                    <input type="date" class="form-control faculty">
+                    <input type="text" class="form-control faculty">
                   </div>
                   <button type="submit" class="btn btn-primary mb-2">Submit</button>
                 </form>`
