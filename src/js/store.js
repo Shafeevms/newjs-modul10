@@ -36,7 +36,7 @@ export let students = [
     middlename: 'Этого',
     surname: 'Массива \u{1F4A9}',
     faculty: 'Разработка',
-    dateBirth: '1982-11-03',
+    dateBirth: '1982-05-12',
     startEdu: '2018-09-01',
   },
 ]

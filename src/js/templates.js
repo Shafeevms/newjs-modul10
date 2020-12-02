@@ -41,4 +41,4 @@ const table = (rows) => {
         </table>`
 }
 
-export { addForm, table};
+export { addForm, table };

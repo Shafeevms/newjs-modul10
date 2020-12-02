@@ -17,7 +17,7 @@ const study = obj => {
     msg = `(${yearNow - firstDate + 1} курс)`;
   } else msg = '(закончил)';
 
-  return `${firstDate}-${lastDate} ${msg}`;
+  return `${firstDate} - ${lastDate} ${msg}`;
 }
 
 // из интернета))) хрен знает как она работает))
@@ -34,7 +34,6 @@ export const tableRender = array => {
     let td = `<th scope="row">${index + 1}</th></th><td class='td__fullname'>${fullName(element)}</td><td class='td__faculty'>${element.faculty}</td><td class='td__birth'>${dateBirth(element)}</td><td class='td__study'>${study(element)}</td>`;
     return acc +='<tr>'+ td + '</tr>';
   }, '');
-  console.log(str)
   return str;
 }
 
