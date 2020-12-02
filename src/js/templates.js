@@ -21,17 +21,18 @@ const addForm = `<form class="form-inline mt-10">
                   <div class="input-group mb-2 mr-sm-2 ml-sm-2">
                     <input type="text" class="form-control faculty">
                   </div>
-                  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                  <button type="submit" class="btn btn-primary mb-2">Add student</button>
                 </form>`
 
 const table = (rows) => {
  return `<table class="table table-striped">
           <thead class="thead-dark">
             <tr>
-              <th class="filter__name">Full Name</th>
-              <th class="filter__faculty">Faculty</th>
-              <th class="filter__age">Birthday / Age</th>
-              <th class="filter__dateEDU">Date of studying / Course</th>
+              <th scope="col">#</th>
+              <th scope="col" class="filter__name">Full Name</th>
+              <th scope="col" class="filter__faculty">Faculty</th>
+              <th scope="col" class="filter__age">Birthday / Age</th>
+              <th scope="col" class="filter__dateEDU">Date of studying / Course</th>
             </tr>
           </thead>
           <tbody>
@@ -39,15 +40,5 @@ const table = (rows) => {
           </tbody>
         </table>`
 }
-
-
-{/* <tr>
-<td>Mark</td>
-<td>Otto</td>
-</tr>
-<tr>
-<td>Jacob</td>
-<td>Thornton</td>
-</tr> */}
 
 export { addForm, table};

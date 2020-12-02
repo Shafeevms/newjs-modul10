@@ -13,13 +13,11 @@ createPopper(popcorn, tooltip);
 // tests
 
 const app = document.querySelector('#app');
-app.innerHTML = temp.addForm;
+app.innerHTML = temp.addForm + temp.table(tableRender(students));
 let birth = document.querySelector('.dateBirth');
 
 app.addEventListener('submit', function(e) {
   e.preventDefault();
-  console.log(birth.value) // string
-
+  console.log(birth.value);
 })
 
-tableRender(students)

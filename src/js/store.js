@@ -12,7 +12,7 @@ export let students = [
     middlename: 'Люциус',
     surname: 'Малфой',
     faculty: 'Слизерин',
-    dateBirth: '1980-06-05',
+    dateBirth: '1979-06-05',
     startEdu: '1996-09-01',
   },
   {
@@ -34,7 +34,7 @@ export let students = [
   {
     name: 'Тестировщик',
     middlename: 'Этого',
-    surname: 'Массива',
+    surname: 'Массива \u{1F4A9}',
     faculty: 'Разработка',
     dateBirth: '1982-11-03',
     startEdu: '2018-09-01',
