@@ -1,28 +1,63 @@
-const addForm = `<form class="form-inline mt-10">
-                  <label class="sr-only" for="studentName">Name</label>
-                  <input type="text" class="form-control mb-2 mr-sm-2" id="studentName" placeholder="Name">
-                  <label class="sr-only" for="studentSurname">Username</label>
-                  <div class="input-group mb-2 mr-sm-2">
-                    <input type="text" class="form-control name" id="studentSurname" placeholder="Surname">
-                  </div>
-                  <label class="sr-only" for="studentMiddlename">Username</label>
-                  <div class="input-group mb-2 mr-sm-2">
-                    <input type="text" class="form-control Middlename" id="studentMiddlename" placeholder="Middlename">
-                  </div>
-                  <label for="inputDate">Date Birth:</label>
-                  <div class="input-group mb-2 mr-sm-2 ml-sm-2">
-                    <input type="date" class="form-control dateBirth">
-                  </div>
-                  <label for="inputDate">Edu started:</label>
-                  <div class="input-group mb-2 mr-sm-2 ml-sm-2">
-                    <input type="date" class="form-control eduStart">
-                  </div>
-                  <label for="inputDate">Faculty:</label>
-                  <div class="input-group mb-2 mr-sm-2 ml-sm-2">
-                    <input type="text" class="form-control faculty">
-                  </div>
-                  <button type="submit" class="btn btn-primary mb-2">Add student</button>
-                </form>`
+const addForm = `
+
+<form class="form-row mt-3 ml-2">
+
+  <div class="col-md-2 mb-3">
+    <label class="" for="studentName">Имя:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="studentName" placeholder="Имя">
+    <div class="invalid-feedback">
+      Введите корректное имя.
+    </div>
+  </div>
+
+  <div class="col-md-2 mb-3">
+    <label class="" for="studentMiddlename">Отчество:</label>
+    <input type="text" class="form-control Middlename" id="studentMiddlename" placeholder="Отчество">
+    <div class="invalid-feedback">
+      Введите корректное отчество.
+    </div>
+  </div>
+
+
+  <div class="col-md-2 mb-3">
+    <label class="" for="studentSurname">Фамилия:</label>
+    <input type="text" class="form-control name" id="studentSurname" placeholder="Фамилия">
+    <div class="invalid-feedback">
+      Введите корректную фамилию.
+    </div>
+  </div>
+
+  <div class="col-md-2 mb-3">
+    <label for="inputDate">Дата рождения:</label>
+    <input type="date" class="form-control dateBirth">
+    <div class="invalid-feedback">
+      Введите корректную дату.
+    </div>
+  </div>
+
+  <div class="col-md-2 mb-3">
+    <label for="inputDate">Начало обучения:</label>
+      <input type="date" class="form-control eduStart">
+      <div class="invalid-feedback">
+        Введите корректную дату.
+    </div>
+  </div>
+
+  <div class="col-md-2 mb-3">
+    <label for="inputDate">Факультет:</label>
+    <input type="text" class="form-control faculty">
+    <div class="invalid-feedback">
+      Введите корректное название.
+    </div>
+  </div>
+  <form class="form-row">
+  <div class="col-md-3 mb-3">
+  <button type="submit" class="btn btn-primary mb-2">Add student</button>
+  </div>
+  </form>
+
+`
+
 
 const table = (rows) => {
  return `<table class="table table-striped">
@@ -42,3 +77,5 @@ const table = (rows) => {
 }
 
 export { addForm, table };
+
+
