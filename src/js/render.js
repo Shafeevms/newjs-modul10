@@ -1,4 +1,4 @@
-const fullName = obj => `${obj.name} ${obj.middlename} ${obj.surname}`;
+const fullName = obj => `${obj.surname} ${obj.name} ${obj.middlename}`;
 
 const dateBirth = obj => {
   const formatDate = obj.datebirth.split('-').reverse().join('.');

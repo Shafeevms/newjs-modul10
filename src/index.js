@@ -7,6 +7,7 @@ import * as temp from './js/templates';
 import { tableRender } from './js/render';
 import { students, START_DATE_1900, START_DATE_2000, OBJECT_LENGTH } from './js/store';
 import { textValid, dateValid, validation } from './js/validation';
+import { filterByProperty, filterByPropertyInverse } from './js/filter';
 const popcorn = document.querySelector('#popcorn');
 const tooltip = document.querySelector('#tooltip');
 createPopper(popcorn, tooltip);
@@ -47,6 +48,14 @@ app.addEventListener('submit', function(e) {
   }
 })
 
+app.addEventListener('click', function(e) {
+  const target = e.target;
+  if (target.classList.contains('title')) {
+    app.querySelector('.table').innerHTML = temp.table(tableRender(filterByProperty(students, target.dataset.name)));
+  } else if (target.classList.contains('filter__age')) {
+    app.querySelector('.table').innerHTML = temp.table(tableRender(filterByPropertyInverse(students, target.dataset.name)));
+  }
+})
 
 
 

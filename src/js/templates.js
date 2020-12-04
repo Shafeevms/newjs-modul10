@@ -64,10 +64,10 @@ const table = (rows) => {
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
-              <th scope="col" class="filter__name title">Full Name</th>
-              <th scope="col" class="filter__faculty title">Faculty</th>
-              <th scope="col" class="filter__age title">Birthday / Age</th>
-              <th scope="col" class="filter__dateEDU title">Date of studying / Course</th>
+              <th scope="col" class="filter__name title header" data-name="surname">Full Name</th>
+              <th scope="col" class="filter__faculty title header" data-name="faculty">Faculty</th>
+              <th scope="col" class="filter__age header" data-name="datebirth">Birthday / Age</th>
+              <th scope="col" class="filter__dateEDU title header" data-name="startedu">Date of studying / Course</th>
             </tr>
           </thead>
           <tbody>
