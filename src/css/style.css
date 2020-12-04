@@ -1,0 +1,9 @@
+.title {
+  cursor: pointer;
+}
+
+.title:hover {
+  background-color: black !important;
+  color: #26e126 !important;
+  outline: 3px solid #26e126;
+}
