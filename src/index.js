@@ -8,6 +8,7 @@ import { tableRender } from './js/render';
 import { students, START_DATE_1900, START_DATE_2000, OBJECT_LENGTH } from './js/store';
 import { textValid, dateValid, validation } from './js/validation';
 import { filterByProperty, filterByPropertyInverse } from './js/filter';
+import { searchByText, searchByDate } from './js/search';
 const popcorn = document.querySelector('#popcorn');
 const tooltip = document.querySelector('#tooltip');
 createPopper(popcorn, tooltip);
@@ -54,11 +55,26 @@ app.addEventListener('click', function(e) {
     app.querySelector('.table').innerHTML = temp.table(tableRender(filterByProperty(students, target.dataset.name)));
   } else if (target.classList.contains('filter__age')) {
     app.querySelector('.table').innerHTML = temp.table(tableRender(filterByPropertyInverse(students, target.dataset.name)));
+  } else if (target.classList.contains('btn-danger')) {
+    app.querySelector('.table').innerHTML = temp.table(tableRender(students));
   }
 })
 
-
-
+app.addEventListener('input', function(e) {
+  const target = e.target;
+  let filtered = [];
+  if (target.classList.contains('search__text')) {
+    filtered = temp.table(tableRender(searchByText(students, target.dataset.name, target.value.toLowerCase())))
+    setTimeout(() => {
+      app.querySelector('.table').innerHTML = filtered;
+    },2000)
+  } else if (target.classList.contains('search__date')) {
+    setTimeout(() => {
+      filtered = temp.table(tableRender(searchByDate(students, target.dataset.name, target.value)));
+      app.querySelector('.table').innerHTML = filtered;
+    },2000)
+  }
+})
 
 
 

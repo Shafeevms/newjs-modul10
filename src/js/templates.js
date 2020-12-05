@@ -71,6 +71,13 @@ const table = (rows) => {
             </tr>
           </thead>
           <tbody>
+          <tr>
+            <td><button type="submit" class="btn btn-danger">Сброс фильтров</button></td>
+            <td><input type="text" class="search__text" placeholder="Фамиилия" data-name="surname"></td>
+            <td><input type="text" class="search__text" placeholder="Факультет" data-name="faculty"></td>
+            <td><input type="text" class="search__date" placeholder="Год рождения" data-name="datebirth"></td>
+            <td><input type="text" class="search__date" placeholder="Год поступления" data-name="startedu"></td>
+          </tr>
            ${rows}
           </tbody>
         </table>`
