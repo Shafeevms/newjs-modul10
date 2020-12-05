@@ -4,7 +4,7 @@ const addForm = `
 
   <div class="col-md-2 mb-3">
     <label class="" for="studentName">Имя:</label>
-    <input type="text" class="form-control mb-2 mr-sm-2" id="studentName" data-name="name" placeholder="Имя">
+    <input type="text" class="form-control mb-2 mr-sm-2 input-form" id="studentName" data-name="name" placeholder="Имя">
     <div class="invalid-feedback">
       Введите корректное имя.
     </div>
@@ -12,7 +12,7 @@ const addForm = `
 
   <div class="col-md-2 mb-3">
     <label class="" for="studentMiddlename">Отчество:</label>
-    <input type="text" class="form-control Middlename" id="studentMiddlename" data-name="middlename" placeholder="Отчество">
+    <input type="text" class="form-control Middlename input-form" id="studentMiddlename" data-name="middlename" placeholder="Отчество">
     <div class="invalid-feedback">
       Введите корректное отчество.
     </div>
@@ -21,7 +21,7 @@ const addForm = `
 
   <div class="col-md-2 mb-3">
     <label class="" for="studentSurname">Фамилия:</label>
-    <input type="text" class="form-control name" id="studentSurname" data-name="surname" placeholder="Фамилия">
+    <input type="text" class="form-control name input-form" id="studentSurname" data-name="surname" placeholder="Фамилия">
     <div class="invalid-feedback">
       Введите корректную фамилию.
     </div>
@@ -29,7 +29,7 @@ const addForm = `
 
   <div class="col-md-2 mb-3">
     <label for="inputDate">Дата рождения:</label>
-    <input type="date" class="form-control dateBirth" data-name="datebirth">
+    <input type="date" class="form-control dateBirth input-form" data-name="datebirth">
     <div class="invalid-feedback">
       Введите корректную дату.
     </div>
@@ -37,7 +37,7 @@ const addForm = `
 
   <div class="col-md-2 mb-3">
     <label for="inputDate">Начало обучения:</label>
-      <input type="date" class="form-control eduStart" data-name="startedu">
+      <input type="date" class="form-control eduStart input-form" data-name="startedu">
       <div class="invalid-feedback">
         Введите корректную дату.
     </div>
@@ -45,7 +45,7 @@ const addForm = `
 
   <div class="col-md-2 mb-3">
     <label for="inputDate">Факультет:</label>
-    <input type="text" class="form-control faculty" data-name="faculty">
+    <input type="text" class="form-control faculty input-form" data-name="faculty">
     <div class="invalid-feedback">
       Введите корректное название.
     </div>
@@ -70,10 +70,10 @@ const table = (rows) => {
             </tr>
             <tr>
               <td><button type="submit" class="btn btn-danger">Сброс фильтров</button></td>
-              <td><input type="text" class="search__text" placeholder="Фамиилия" data-name="surname"></td>
-              <td><input type="text" class="search__text" placeholder="Факультет" data-name="faculty"></td>
-              <td><input type="text" class="search__date" placeholder="Год рождения" data-name="datebirth"></td>
-              <td><input type="text" class="search__date" placeholder="Год поступления" data-name="startedu"></td>
+              <td><input type="text" class="search__text search" placeholder="Фамиилия" data-name="surname"></td>
+              <td><input type="text" class="search__text search" placeholder="Факультет" data-name="faculty"></td>
+              <td><input type="text" class="search__date search" placeholder="Год рождения" data-name="datebirth"></td>
+              <td><input type="text" class="search__date search" placeholder="Год поступления" data-name="startedu"></td>
             </tr>
           </thead>
           <tbody>
