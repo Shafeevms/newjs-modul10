@@ -58,7 +58,6 @@ const addForm = `
 
 `
 
-
 const table = (rows) => {
  return `<table class="table table-striped">
           <thead class="thead-dark">
@@ -69,15 +68,15 @@ const table = (rows) => {
               <th scope="col" class="filter__age header" data-name="datebirth">Birthday / Age</th>
               <th scope="col" class="filter__dateEDU title header" data-name="startedu">Date of studying / Course</th>
             </tr>
+            <tr>
+              <td><button type="submit" class="btn btn-danger">Сброс фильтров</button></td>
+              <td><input type="text" class="search__text" placeholder="Фамиилия" data-name="surname"></td>
+              <td><input type="text" class="search__text" placeholder="Факультет" data-name="faculty"></td>
+              <td><input type="text" class="search__date" placeholder="Год рождения" data-name="datebirth"></td>
+              <td><input type="text" class="search__date" placeholder="Год поступления" data-name="startedu"></td>
+            </tr>
           </thead>
           <tbody>
-          <tr>
-            <td><button type="submit" class="btn btn-danger">Сброс фильтров</button></td>
-            <td><input type="text" class="search__text" placeholder="Фамиилия" data-name="surname"></td>
-            <td><input type="text" class="search__text" placeholder="Факультет" data-name="faculty"></td>
-            <td><input type="text" class="search__date" placeholder="Год рождения" data-name="datebirth"></td>
-            <td><input type="text" class="search__date" placeholder="Год поступления" data-name="startedu"></td>
-          </tr>
            ${rows}
           </tbody>
         </table>`

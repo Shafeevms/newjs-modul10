@@ -2,6 +2,8 @@ export const START_DATE_1900 = new Date(1900, 0, 1);
 export const START_DATE_2000 = new Date(2000, 0, 1);
 export const OBJECT_LENGTH = 6;
 
+export const arrayToUse = (a, b) => a.length > 0 ? a : b;
+
 export let students = [
   {
     name: 'Гарри',

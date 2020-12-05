@@ -1,4 +1,4 @@
-export const filterByProperty = (array, name) => {
+export const sortByProperty = (array, name) => {
   let newArray = [...array];
   return newArray.sort((a, b) => {
     if (a[name] > b[name]) {
@@ -11,7 +11,7 @@ export const filterByProperty = (array, name) => {
   })
 }
 
-export const filterByPropertyInverse = (array, name) => {
+export const sortByPropertyInverse = (array, name) => {
   let newArray = [...array];
   return newArray.sort((a, b) => {
     if (a[name] > b[name]) {
@@ -23,5 +23,13 @@ export const filterByPropertyInverse = (array, name) => {
     return 0;
   })
 }
+export const searchByText = (array, prop, text) => {
+  let newArr = [...array];
+  return newArr.filter(object => object[prop].toLowerCase().includes(text))
+}
 
+export const searchByDate = (array, prop, text) => {
+  let newArr = [...array];
+  return newArr.filter(object => object[prop].slice(0, 4).includes(text))
+}
 
